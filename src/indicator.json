@@ -1,0 +1,487 @@
+{
+  "report": {
+    "company": {
+      "name": "Lifeguard Tavern",
+      "siret": "1234567678"
+    },
+    "publishDate": "September 2019",
+    "startPeriod": "Sept. 2018",
+    "endPeriod": "Sept. 2019"
+  },
+  "scores": {
+    "overall": {
+      "score": 10
+    },
+    "indicator1": {
+      "score": 10,
+      "details": {
+        "workers": {
+          "0_29": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "30_39": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "40_49": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "50_+": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          }
+        },
+        "employees": {
+          "0_29": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "30_39": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "40_49": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "50_+": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          }
+        },
+        "technicians": {
+          "0_29": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "30_39": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "40_49": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "50_+": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          }
+        },
+        "engineers": {
+          "0_29": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "30_39": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "40_49": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          },
+          "50_+": {
+            "annualSalary": {
+              "female": 100,
+              "male": 100
+            },
+            "delta": 12,
+            "deltaTreshold": 10,
+            "headcount": {
+              "female": 100,
+              "male": 100
+            },
+            "validGroup": "oui",
+            "validStaff": "oui",
+            "deltaTotal": 12
+          }
+        },
+        "total": {
+          "annualSalary": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "deltaTreshold": 10,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        }
+      }
+    },
+    "indicator2": {
+      "score": 10,
+      "details": {
+        "workers": {
+          "payRiseRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "employees": {
+          "payRiseRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "technicians": {
+          "payRiseRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "engineers": {
+          "payRiseRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "total": {
+          "payRiseRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        }
+      }
+    },
+    "indicator3": {
+      "score": 10,
+      "details": {
+        "workers": {
+          "promotionRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "employees": {
+          "promotionRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "technicians": {
+          "promotionRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "engineers": {
+          "promotionRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        },
+        "total": {
+          "promotionRate": {
+            "female": 100,
+            "male": 100
+          },
+          "delta": 12,
+          "headcount": {
+            "female": 100,
+            "male": 100
+          },
+          "validGroup": "oui",
+          "validStaff": "oui",
+          "deltaTotal": 12
+        }
+      }
+    },
+    "indicator4": {
+      "score": 10,
+      "details": {
+        "MaternityLeave": {
+          "totalLeaves": 100,
+          "totalPayRise": 100
+        },
+        "deltaTotal": 12
+      },
+      "employeeList": [
+        {
+          "id": "123456",
+          "matricule": "DANSNF09",
+          "firstName": "Julie",
+          "lastName": "DANTREB",
+          "returnDaten": "11/11/2019",
+          "payRise": 11
+        },
+        {
+          "id": "567890",
+          "matricule": "ADSJDK09",
+          "firstName": "Kilia",
+          "lastName": "DUMAS",
+          "returnDaten": "11/11/2019",
+          "payRise": 8.3
+        }
+      ]
+    },
+    "indicator5": {
+      "score": 10,
+      "details": {
+        "top10": {
+          "male": 8,
+          "female": 2,
+          "total": 10
+        },
+        "deltaTotal": 12
+      },
+      "employeeList": [
+        {
+          "id": "123456",
+          "matricule": "DANSNF09",
+          "firstName": "Julie",
+          "lastName": "DANTREB"
+        },
+        {
+          "id": "567890",
+          "matricule": "ADSJDK09",
+          "firstName": "Kilia",
+          "lastName": "DUMAS"
+        }
+      ]
+    }
+  }
+}

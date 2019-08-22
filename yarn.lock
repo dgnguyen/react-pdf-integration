@@ -1222,10 +1222,10 @@
   resolved "https://registry.npmjs.org/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
   integrity sha1-APy5adykzoKgp2c0E63gOeR7Nh4=
 
-"@react-pdf/renderer@^1.5.6":
-  version "1.5.6"
-  resolved "https://registry.npmjs.org/@react-pdf/renderer/-/renderer-1.5.6.tgz#4090e921b981db0bf3b06b45694ea04612557d26"
-  integrity sha512-gDF6oszXcJTuNZZ6DK3MZEVFKRgbU1djspssx2PuYxdIWoKdRJB8Peh4tPnNvIK6rYA8aCRJCBrafEiNam7GVg==
+"@react-pdf/renderer@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.npmjs.org/@react-pdf/renderer/-/renderer-1.6.4.tgz#282acdab90a2a33e99921cd191fde12c8d4db631"
+  integrity sha512-/R/NPc3plpZnw8oE6ngoRuVVYV1mlXl3QQd64gK9mUG09T/hMhTJFtGnoJAEFNfAoxoO9P2P/6jxpYCpFUbuxA==
   dependencies:
     "@babel/runtime" "^7.3.1"
     "@react-pdf/fontkit" "^1.13.0"
@@ -1241,6 +1241,7 @@
     ramda "^0.26.1"
     react "^16.8.6"
     react-reconciler "^0.20.4"
+    scheduler "^0.14.0"
     yoga-layout-prebuilt "^1.9.3"
 
 "@react-pdf/styled-components@^1.4.0":
@@ -9247,6 +9248,14 @@ scheduler@^0.13.6:
   version "0.13.6"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
   integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.14.0.tgz#b392c23c9c14bfa2933d4740ad5603cc0d59ea5b"
+  integrity sha512-9CgbS06Kki2f4R9FjLSITjZo5BZxPsryiRNyL3LpvrM9WxcVmhlqAOc9E+KQbeI2nqej4JIIbOsfdL51cNb4Iw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

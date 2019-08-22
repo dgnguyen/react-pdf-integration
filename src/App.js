@@ -13,7 +13,12 @@ function App() {
   return (
     <div className="App">
       <PDFViewer style={styles.page}>
-        <MyDocument />
+        <MyDocument
+          title="Indicator"
+          author="Indicator"
+          subject="Indicator"
+          creator="Indicator"
+        />
       </PDFViewer>
       <br />
       {/* <PDFDownloadLink document={<MyDocument />} fileName="table.pdf">
