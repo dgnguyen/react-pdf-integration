@@ -3,9 +3,9 @@ import { View } from '@react-pdf/renderer'
 
 import ScoresResumeTable from './ScoresResumeTable'
 import ScoresIndicatorsTable from './ScoresIndicatorsTable'
-// import ScoresIndicator1table from './ScoresIndicator1table'
+
 import List, { Item } from '../List'
-import { ContentPage, NormalText, Titre1, Titre2, Titre3 } from '../../Styled'
+import { ContentPage, NormalText, Title1, Title2, Title3 } from '../../Styled'
 
 export default ({
   data: {
@@ -35,8 +35,8 @@ export default ({
   ]
   return (
     <ContentPage>
-      <Titre1>Scores</Titre1>
-      <Titre2>Score global</Titre2>
+      <Title1>Scores</Title1>
+      <Title2>Score global</Title2>
       <ScoresResumeTable
         data={{
           title: 'Résultat',
@@ -83,13 +83,12 @@ export default ({
         </NormalText>
       </View>
       <View>
-        <Titre3>Méthode de calcul</Titre3>
+        <Title3>Méthode de calcul</Title3>
         <NormalText>
           Vous trouverez, ci-dessous, la répartition des points acquis
           indicateur par indicateur :
         </NormalText>
         <ScoresIndicatorsTable data={scoresIndicator} />
-        {/* <ScoresIndicator1table data={indicator1} /> */}
       </View>
     </ContentPage>
   )

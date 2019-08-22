@@ -9,6 +9,7 @@ import { IndexPage } from './Content/IndexPage'
 import { Introduction } from './Content/Introduction'
 import PageNumber from './Content/PageNumber'
 import Scores from './Content/Scores'
+import ScoresIndicator1 from './Content/Scores/ScoresIndicator1'
 
 Font.register({
   family: 'Arial',
@@ -65,6 +66,11 @@ export const MyDocument = props => {
       <WrapPage size="A4" wrap style={styles.page}>
         <Scores data={{ scores, startPeriod, endPeriod }} />
         <PageNumber />
+      </WrapPage>
+      <WrapPage size="A4" wrap style={styles.page}>
+        <ScoresIndicator1
+          data={{ scores: scores.indicator1, startPeriod, endPeriod }}
+        />
       </WrapPage>
     </Document>
   )

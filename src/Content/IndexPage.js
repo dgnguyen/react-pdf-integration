@@ -1,10 +1,10 @@
 import React from 'react'
-import { ContentPage, Titre1, NormalText } from '../Styled'
+import { ContentPage, Title1, NormalText } from '../Styled'
 
 export const IndexPage = () => {
   return (
     <ContentPage>
-      <Titre1>Table des matières</Titre1>
+      <Title1>Table des matières</Title1>
       <NormalText>Introduction 2</NormalText>
       <NormalText>Le contexte 2</NormalText>
       <NormalText>Les indicateurs 2</NormalText>

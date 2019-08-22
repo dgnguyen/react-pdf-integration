@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from '@react-pdf/renderer'
 import List, { Item } from '../List'
-import { ContentPage, Titre1, Titre2, NormalText, BoldText } from '../../Styled'
+import { ContentPage, Title1, Title2, NormalText, BoldText } from '../../Styled'
 
 export const Introduction = ({
   data: {
@@ -12,8 +12,8 @@ export const Introduction = ({
 }) => {
   return (
     <ContentPage>
-      <Titre1>Introduction</Titre1>
-      <Titre2>Le contexte</Titre2>
+      <Title1>Introduction</Title1>
+      <Title2>Le contexte</Title2>
       <NormalText>
         Le gouvernement a fait de la lutte pour l’égalité entre femme et homme
         une priorité. Cela passe également par une égalité salariale.
@@ -35,7 +35,7 @@ export const Introduction = ({
         Il a vocation à servir d’aide au remplissage des tableaux attendus par
         l’Administration sous réserve de validation des données.
       </NormalText>
-      <Titre2>Les indicateurs</Titre2>
+      <Title2>Les indicateurs</Title2>
       <NormalText>
         5 critères ont été retenus pour les entreprises de plus de 250 salariés
         :
@@ -113,7 +113,7 @@ export const Introduction = ({
         </NormalText>
       </View>
       <View>
-        <Titre2>Le score et ses impacts</Titre2>
+        <Title2>Le score et ses impacts</Title2>
         <NormalText>
           Une société qui respecterait une égalité parfaite entre les femmes et
           les hommes pourrait totaliser 100 points.
@@ -134,7 +134,7 @@ export const Introduction = ({
         </NormalText>
       </View>
       <View>
-        <Titre2>L’alimentation du fichier</Titre2>
+        <Title2>L’alimentation du fichier</Title2>
         <NormalText>
           Les indicateurs sont calculés à partir des données issues des DSN
           produites sur la période. Chaque DSN est archivée et les données en
