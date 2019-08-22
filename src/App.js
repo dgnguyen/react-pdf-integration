@@ -1,13 +1,13 @@
-import React from "react";
-import { PDFViewer, StyleSheet } from "@react-pdf/renderer";
-import "./App.css";
+import React from 'react'
+import { PDFViewer, StyleSheet } from '@react-pdf/renderer'
+import './App.css'
 
-import { MyDocument } from "./MyDocument";
+import { MyDocument } from './MyDocument'
 
 const styles = StyleSheet.create({
-  page: { width: "100%", height: "600px" },
-  section: { color: "white", textAlign: "center", margin: 30 }
-});
+  page: { width: '100%', height: '600px' },
+  section: { color: 'white', textAlign: 'center', margin: 30 },
+})
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         }}
       </PDFDownloadLink> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

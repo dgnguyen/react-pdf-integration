@@ -50,6 +50,7 @@ export const MyDocument = props => {
     report: { company, startPeriod, endPeriod, publishDate },
     scores,
   } = data
+  console.log('scores: ', scores)
   return (
     <Document {...props}>
       <Page size="A4" style={styles.page}>
@@ -62,7 +63,7 @@ export const MyDocument = props => {
         <Introduction data={{ company, startPeriod, endPeriod }} />
       </WrapPage>
       <WrapPage size="A4" wrap style={styles.page}>
-        <Scores data={scores} />
+        <Scores data={{ scores, startPeriod, endPeriod }} />
         <PageNumber />
       </WrapPage>
     </Document>

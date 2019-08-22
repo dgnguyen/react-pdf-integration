@@ -10,9 +10,12 @@
   },
   "scores": {
     "overall": {
-      "score": 10
+     "applicable" : true,
+      "score": 10,
+      "index": 10
     },
     "indicator1": {
+      "applicable": true,
       "score": 10,
       "details": {
         "workers": {
@@ -281,6 +284,7 @@
       }
     },
     "indicator2": {
+      "applicable": false,
       "score": 10,
       "details": {
         "workers": {
@@ -356,6 +360,7 @@
       }
     },
     "indicator3": {
+      "applicable": true,
       "score": 10,
       "details": {
         "workers": {
@@ -431,6 +436,7 @@
       }
     },
     "indicator4": {
+      "applicable": false,
       "score": 10,
       "details": {
         "MaternityLeave": {
@@ -459,6 +465,7 @@
       ]
     },
     "indicator5": {
+      "applicable": true,
       "score": 10,
       "details": {
         "top10": {

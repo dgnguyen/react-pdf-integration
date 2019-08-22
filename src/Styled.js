@@ -26,21 +26,22 @@ export const Informations = styled.View`
   margin-left: 300px;
 `
 
-export const Table = styled.View`
+export const Table = styled(View)`
   display: table;
   width: auto;
   border: 1px solid black;
   border-right: 0;
   border-bottom: 0;
+  margin: 10px 0;
 `
 
-export const TR = styled.View`
+export const TR = styled(View)`
   margin: auto;
   flex-direction: row;
   min-height: 15px;
 `
 
-export const Cell = styled.View`
+export const Cell = styled(View)`
   border: 1px solid black;
   border-left: 0;
   border-top: 0;
@@ -54,8 +55,7 @@ export const CellNoBottom = styled.View`
 `
 
 export const CellText = styled.Text`
-  margin: 2px auto;
-  font-size: 10px;
+  padding: 5px;
 `
 
 export const Total = styled.View`
@@ -105,13 +105,19 @@ export const ContentPage = styled(View)`
 
 export const Titre1 = styled(Text)`
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-family: Arial Bold;
 `
 
 export const Titre2 = styled(Text)`
   font-size: 15px;
-  margin: 16px 0;
+  margin: 10px 0;
+`
+
+export const Titre3 = styled(Text)`
+  font-size: 14px;
+  color: #251c0a;
+  margin: 10px 0;
 `
 
 export const NormalText = styled(Text)`
