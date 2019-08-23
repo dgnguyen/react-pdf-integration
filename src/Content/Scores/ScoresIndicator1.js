@@ -1,15 +1,8 @@
 import React from 'react'
 import { View } from '@react-pdf/renderer'
 import ScoresResumeTable from './ScoresResumeTable'
-import {
-  ContentPage,
-  Title2,
-  Title3,
-  NormalText,
-  SubTitle,
-  TitleContainer,
-  FooterLogo,
-} from '../../Styled'
+import CalculationMethod1 from './CalculationMethod1'
+import { ContentPage, Title2, Title3, NormalText } from '../../Styled'
 
 export default ({ data: { scores, startPeriod, endPeriod } }) => {
   return (
@@ -32,6 +25,7 @@ export default ({ data: { scores, startPeriod, endPeriod } }) => {
           équivalents ».
         </NormalText>
         <Title3>Méthode de calcul</Title3>
+        <CalculationMethod1 data={scores} />
       </View>
     </ContentPage>
   )

@@ -60,7 +60,7 @@ export const MyDocument = props => {
       <Page size="A4" style={styles.page}>
         <IndexPage />
       </Page>
-      <WrapPage size="A4" wrap style={styles.page}>
+      <WrapPage size="A4" style={styles.page}>
         <Introduction data={{ company, startPeriod, endPeriod }} />
       </WrapPage>
       <WrapPage size="A4" wrap style={styles.page}>

@@ -21,22 +21,22 @@
         "workers": {
           "0_29": {
             "annualSalary": {
-              "female": 100,
+              "female": 10,
               "male": 100
             },
-            "delta": 12,
+            "delta": 1,
             "deltaTreshold": 10,
             "headcount": {
               "female": 100,
               "male": 100
             },
             "validGroup": "oui",
-            "validStaff": "oui",
-            "deltaTotal": 12
+            "validStaff": "non",
+            "deltaTotal": 100
           },
           "30_39": {
             "annualSalary": {
-              "female": 100,
+              "female": 39,
               "male": 100
             },
             "delta": 12,
