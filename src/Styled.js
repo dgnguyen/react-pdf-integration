@@ -45,6 +45,11 @@ export const Cell = styled(View)`
   border: 1px solid black;
   border-left: 0;
   border-top: 0;
+  width: ${({ width }) => (width ? `${width}%` : '100%')};
+  height: ${({ height }) => (height ? `${height}px` : 'auto')};
+  border-right: ${({ borderRight }) => (borderRight ? `${borderRight}` : 1)};
+  border-bottom: ${({ borderBottom }) =>
+    borderBottom ? `${borderBottom}` : 1};
 `
 
 export const CellNoBottom = styled.View`

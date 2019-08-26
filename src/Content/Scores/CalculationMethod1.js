@@ -13,36 +13,8 @@ const styles = StyleSheet.create({
   trTitle: {
     textAlign: 'center',
   },
-  cell8: {
-    width: '8%',
-  },
-  cell9: {
-    width: '9%',
-  },
-  cell10: {
-    width: '10%',
-  },
-  cell14: {
-    width: '14%',
-  },
-  cell15: {
-    width: '15%',
-  },
-  cell50: {
-    width: '50%',
-  },
-  cell100: {
-    width: '100%',
-    borderRight: 'none',
-  },
-  cellNoBottom: {
-    borderBottom: 'none',
-  },
 })
 export default ({ data }) => {
-  console.log('====================================')
-  console.log('data', data)
-  console.log('====================================')
   const categories = [
     { name: 'Ouvriers', details: data.details.workers },
     { name: 'Employés', details: data.details.employees },
@@ -70,51 +42,51 @@ export default ({ data }) => {
   return (
     <Table style={styles.table}>
       <TR style={styles.trTitle}>
-        <Cell style={styles.cell8}>
+        <Cell width={8}>
           <CellText>Catégorie socioprofessionnelle (CSP)</CellText>
         </Cell>
-        <Cell style={styles.cell14}>
+        <Cell width={14}>
           <CellText>Trance d'âge</CellText>
         </Cell>
-        <Cell style={styles.cell15}>
-          <Cell style={{ ...styles.cell100, height: 48 }}>
+        <Cell width={15}>
+          <Cell width={100} borderRight={'none'} height={48}>
             <CellText>Rémunération annuelle brute moyenne par EQTP</CellText>
           </Cell>
           <TR>
-            <Cell style={{ ...styles.cell50, ...styles.cellNoBottom }}>
+            <Cell width={50} borderBottom={'none'}>
               <CellText>Femme</CellText>
             </Cell>
-            <Cell style={{ ...styles.cell50, ...styles.cellNoBottom }}>
+            <Cell width={50} borderBottom={'none'}>
               <CellText>Homme</CellText>
             </Cell>
           </TR>
         </Cell>
-        <Cell style={styles.cell10}>
+        <Cell width={10}>
           <CellText>Ecart de rémunération moyenne</CellText>
         </Cell>
-        <Cell style={styles.cell10}>
+        <Cell width={10}>
           <CellText>Ecart après application du seuil de pretinence</CellText>
         </Cell>
-        <Cell style={styles.cell15}>
-          <Cell style={{ ...styles.cell100, height: 48 }}>
+        <Cell width={15}>
+          <Cell width={100} borderRight={'none'} height={48}>
             <CellText>Nombre de salariées</CellText>
           </Cell>
           <TR>
-            <Cell style={{ ...styles.cell50, ...styles.cellNoBottom }}>
+            <Cell width={50} borderBottom={'none'}>
               <CellText>Femme</CellText>
             </Cell>
-            <Cell style={{ ...styles.cell50, ...styles.cellNoBottom }}>
+            <Cell width={50} borderBottom={'none'}>
               <CellText>Homme</CellText>
             </Cell>
           </TR>
         </Cell>
-        <Cell style={styles.cell9}>
+        <Cell width={9}>
           <CellText>Validité du groupe (1=oui, 0=non)</CellText>
         </Cell>
-        <Cell style={styles.cell9}>
+        <Cell width={9}>
           <CellText>Effectifs valides (groupes pris en compte)</CellText>
         </Cell>
-        <Cell style={styles.cell10}>
+        <Cell width={10}>
           <CellText>Ecart pondéré</CellText>
         </Cell>
       </TR>
@@ -122,17 +94,17 @@ export default ({ data }) => {
         const detailsByAge = toArray(categorie.details)
         return (
           <TR key={`categories_${categorie.name}`}>
-            <Cell style={styles.cell8}>
+            <Cell width={8}>
               <CellText>{categorie.name}</CellText>
             </Cell>
-            <Cell style={styles.cell14}>
+            <Cell width={14}>
               {agesTrance.map((itemAgeTrance, indexAgeTrance) => (
                 <Cell
                   key={`itemAgeTrance_${itemAgeTrance}`}
-                  style={
-                    indexAgeTrance + 1 < agesTrance.length
-                      ? styles.cell100
-                      : { ...styles.cell100, ...styles.cellNoBottom }
+                  width={100}
+                  borderRight={'none'}
+                  borderBottom={
+                    indexAgeTrance + 1 === agesTrance.length && 'none'
                   }
                 >
                   <CellText>{itemAgeTrance}</CellText>
@@ -148,8 +120,8 @@ export default ({ data }) => {
                       value: detailKey,
                       detailsByAge,
                       agesTranceLength: agesTrance.length,
-                      styleCellContainer: styles.cell15,
-                      styleCellItem: styles.cell50,
+                      styleCellContainer: 15,
+                      styleCellItem: 50,
                     }}
                   />
                 )
@@ -164,17 +136,21 @@ export default ({ data }) => {
                     styleCellContainer: ['validGroup', 'validStaff'].includes(
                       detailKey,
                     )
-                      ? styles.cell9
-                      : styles.cell10,
-                    styleCellItem: styles.cell100,
+                      ? 9
+                      : 10,
+                    styleCellItem: 100,
                   }}
                 />
               )
             })}
           </TR>
-          <TotalCalcul data={data.details.total} detailsKey={detailsKey} text= {'Ensemble des salariés'}/>
         )
       })}
+      <TotalCalcul
+        data={data.details.total}
+        detailsKey={detailsKey}
+        title={'Ensemble des salariés'}
+      />
     </Table>
   )
 }

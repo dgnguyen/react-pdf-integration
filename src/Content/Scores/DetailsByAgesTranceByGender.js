@@ -11,23 +11,16 @@ export default ({
   },
 }) => {
   const genders = ['female', 'male']
+
   return (
-    <Cell style={styleCellContainer}>
+    <Cell width={styleCellContainer}>
       {detailsByAge.map((itemByAge, indexByAge) => (
         <TR key={`detailsByAgesTranceByGender_${value}_${indexByAge}`}>
           {genders.map((gender, index) => (
             <Cell
               key={`gender_${value}_${gender}`}
-              style={
-                indexByAge + 1 < agesTranceLength
-                  ? {
-                      ...styleCellItem,
-                    }
-                  : {
-                      ...styleCellItem,
-                      borderBottom: 'none',
-                    }
-              }
+              width={styleCellItem}
+              borderBottom={indexByAge + 1 === agesTranceLength && 'none'}
             >
               <CellText>{itemByAge[`${value}`][`${gender}`]}</CellText>
             </Cell>
