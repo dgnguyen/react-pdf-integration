@@ -5,6 +5,7 @@ import DetailsByAgesTrance from './DetailsByAgesTrance'
 import DetailsByAgesTranceByGender from './DetailsByAgesTranceByGender'
 import { Table, TR, Cell, CellText } from '../../Styled'
 import TotalCalcul from './TotalCalcul'
+import { getDetailsKey, generateUID } from '../../helpers'
 
 const styles = StyleSheet.create({
   table: {
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
   },
 })
 export default ({ data }) => {
-  const categories = [
+  const jobs = [
     { name: 'Ouvriers', details: data.details.workers },
     { name: 'Employés', details: data.details.employees },
     {
@@ -30,15 +31,9 @@ export default ({ data }) => {
     'De 40 à 49 ans',
     '50 ans et plus',
   ]
-  const detailsKey = [
-    'annualSalary',
-    'delta',
-    'deltaTreshold',
-    'headcount',
-    'validGroup',
-    'validStaff',
-    'deltaTotal',
-  ]
+
+  const detailsKey = getDetailsKey('indicator1')
+
   return (
     <Table style={styles.table}>
       <TR style={styles.trTitle}>
@@ -49,14 +44,14 @@ export default ({ data }) => {
           <CellText>Trance d'âge</CellText>
         </Cell>
         <Cell width={15}>
-          <Cell width={100} borderRight={'none'} height={48}>
+          <Cell width={100} borderRight={'none'} height={50}>
             <CellText>Rémunération annuelle brute moyenne par EQTP</CellText>
           </Cell>
           <TR>
             <Cell width={50} borderBottom={'none'}>
               <CellText>Femme</CellText>
             </Cell>
-            <Cell width={50} borderBottom={'none'}>
+            <Cell width={50} borderRight={'none'} borderBottom={'none'}>
               <CellText>Homme</CellText>
             </Cell>
           </TR>
@@ -68,14 +63,14 @@ export default ({ data }) => {
           <CellText>Ecart après application du seuil de pretinence</CellText>
         </Cell>
         <Cell width={15}>
-          <Cell width={100} borderRight={'none'} height={48}>
+          <Cell width={100} borderRight={'none'} height={50}>
             <CellText>Nombre de salariées</CellText>
           </Cell>
           <TR>
             <Cell width={50} borderBottom={'none'}>
               <CellText>Femme</CellText>
             </Cell>
-            <Cell width={50} borderBottom={'none'}>
+            <Cell width={50} borderRight={'none'} borderBottom={'none'}>
               <CellText>Homme</CellText>
             </Cell>
           </TR>
@@ -90,17 +85,22 @@ export default ({ data }) => {
           <CellText>Ecart pondéré</CellText>
         </Cell>
       </TR>
-      {categories.map((categorie, i) => {
-        const detailsByAge = toArray(categorie.details)
+      {jobs.map((job, indexJob) => {
+        const detailsByAge = toArray(job.details)
         return (
-          <TR key={`categories_${categorie.name}`}>
+          <TR key={`${generateUID(indexJob, 'indicator1', job.name)}`}>
             <Cell width={8}>
-              <CellText>{categorie.name}</CellText>
+              <CellText>{job.name}</CellText>
             </Cell>
             <Cell width={14}>
               {agesTrance.map((itemAgeTrance, indexAgeTrance) => (
                 <Cell
-                  key={`itemAgeTrance_${itemAgeTrance}`}
+                  key={`${generateUID(
+                    indexAgeTrance,
+                    'indicator1',
+                    job.name,
+                    itemAgeTrance,
+                  )}`}
                   width={100}
                   borderRight={'none'}
                   borderBottom={
@@ -112,11 +112,18 @@ export default ({ data }) => {
               ))}
             </Cell>
             {detailsKey.map((detailKey, index) => {
+              const keysOfDetails = generateUID(
+                index,
+                'indicator1',
+                job.name,
+                detailKey,
+              )
               if (['annualSalary', 'headcount'].includes(detailKey)) {
                 return (
                   <DetailsByAgesTranceByGender
-                    key={`detailKeyContainer_${detailKey}_${index}`}
+                    key={keysOfDetails}
                     data={{
+                      key: keysOfDetails,
                       value: detailKey,
                       detailsByAge,
                       agesTranceLength: agesTrance.length,
@@ -126,10 +133,12 @@ export default ({ data }) => {
                   />
                 )
               }
+
               return (
                 <DetailsByAgesTrance
-                  key={`detailKeyContainer_${detailKey}_${index}`}
+                  key={keysOfDetails}
                   data={{
+                    key: keysOfDetails,
                     value: detailKey,
                     detailsByAge,
                     agesTranceLength: agesTrance.length,

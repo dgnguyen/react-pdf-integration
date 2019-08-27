@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleSheet } from '@react-pdf/renderer'
 import { CellText, TR, Cell } from '../../Styled'
 import DetailsByAgesTranceByGender from './DetailsByAgesTranceByGender'
 import DetailsByAgesTrance from './DetailsByAgesTrance'
@@ -11,11 +10,13 @@ export default ({ title, detailsKey, data }) => {
         <CellText>{title}</CellText>
       </Cell>
       {detailsKey.map((detailKey, index) => {
+        const keysOfTotal = `TotalCalcul_${detailKey}_${index}`
         if (['annualSalary', 'headcount'].includes(detailKey)) {
           return (
             <DetailsByAgesTranceByGender
-              key={`detailKeyContainer_${detailKey}_${index}`}
+              key={keysOfTotal}
               data={{
+                key: keysOfTotal,
                 value: detailKey,
                 detailsByAge: [data],
                 agesTranceLength: 1,
@@ -25,10 +26,12 @@ export default ({ title, detailsKey, data }) => {
             />
           )
         }
+
         return (
           <DetailsByAgesTrance
-            key={`detailKeyContainer_${detailKey}_${index}`}
+            key={keysOfTotal}
             data={{
+              key: keysOfTotal,
               value: detailKey,
               detailsByAge: [data],
               agesTranceLength: 1,

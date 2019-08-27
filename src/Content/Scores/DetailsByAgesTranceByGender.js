@@ -3,6 +3,7 @@ import { Cell, TR, CellText } from '../../Styled'
 
 export default ({
   data: {
+    key,
     value,
     detailsByAge,
     agesTranceLength,
@@ -15,10 +16,10 @@ export default ({
   return (
     <Cell width={styleCellContainer}>
       {detailsByAge.map((itemByAge, indexByAge) => (
-        <TR key={`detailsByAgesTranceByGender_${value}_${indexByAge}`}>
+        <TR key={`${key}_${value}_${indexByAge}`}>
           {genders.map((gender, index) => (
             <Cell
-              key={`gender_${value}_${gender}`}
+              key={`${key}_${value}_${gender}_${index}`}
               width={styleCellItem}
               borderBottom={indexByAge + 1 === agesTranceLength && 'none'}
             >

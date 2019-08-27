@@ -3,6 +3,7 @@ import { Cell, CellText } from '../../Styled'
 
 export default ({
   data: {
+    key,
     value,
     detailsByAge,
     agesTranceLength,
@@ -14,7 +15,7 @@ export default ({
     <Cell width={styleCellContainer}>
       {detailsByAge.map((itemByAge, indexByAge) => (
         <Cell
-          key={`key_${value}_${indexByAge}`}
+          key={`${key}_${value}_${indexByAge}`}
           borderRight={'none'}
           borderBottom={indexByAge + 1 === agesTranceLength && 'none'}
           width={styleCellItem}

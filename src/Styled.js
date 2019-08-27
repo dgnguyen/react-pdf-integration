@@ -125,6 +125,12 @@ export const Title3 = styled(Text)`
   margin: 10px 0;
 `
 
+export const Title4 = styled(Text)`
+  font-size: 13px;
+  color: #9b9b9b;
+  margin: 5px 0;
+`
+
 export const NormalText = styled(Text)`
   font-family: Arial;
   line-height: 1.2;
@@ -132,4 +138,8 @@ export const NormalText = styled(Text)`
 
 export const BoldText = styled(Text)`
   font-family: Arial Bold;
+`
+
+export const ItalicText = styled(Text)`
+  font-family: Arial Italic;
 `

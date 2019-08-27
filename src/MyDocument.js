@@ -10,6 +10,7 @@ import { Introduction } from './Content/Introduction'
 import PageNumber from './Content/PageNumber'
 import Scores from './Content/Scores'
 import ScoresIndicator1 from './Content/Scores/ScoresIndicator1'
+import ScoresIndicator2 from './Content/Scores/ScoresIndicator2'
 
 Font.register({
   family: 'Arial',
@@ -19,6 +20,11 @@ Font.register({
 Font.register({
   family: 'Arial Bold',
   src: '/fonts/arial-bold.ttf',
+})
+
+Font.register({
+  family: 'Arial Italic',
+  src: '/fonts/arial-italic.ttf',
 })
 
 const styles = StyleSheet.create({
@@ -67,9 +73,14 @@ export const MyDocument = props => {
         <Scores data={{ scores, startPeriod, endPeriod }} />
         <PageNumber />
       </WrapPage>
-      <WrapPage size="A4" wrap style={styles.page}>
+      <WrapPage size="A4" style={styles.page}>
         <ScoresIndicator1
           data={{ scores: scores.indicator1, startPeriod, endPeriod }}
+        />
+      </WrapPage>
+      <WrapPage size="A4" style={styles.page}>
+        <ScoresIndicator2
+          data={{ scores: scores.indicator2, startPeriod, endPeriod }}
         />
       </WrapPage>
     </Document>

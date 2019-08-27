@@ -285,7 +285,7 @@
     },
     "indicator2": {
       "applicable": false,
-      "score": 10,
+      "score": 12,
       "details": {
         "workers": {
           "payRiseRate": {
