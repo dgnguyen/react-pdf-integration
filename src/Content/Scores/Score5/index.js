@@ -6,7 +6,6 @@ import {
   Title3,
   NormalText,
   BoldText,
-  ItalicText,
   Title4,
   Div,
 } from '../../../Styled'

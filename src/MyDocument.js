@@ -55,14 +55,11 @@ const WrapPage = ({ children }) => (
 )
 
 export const MyDocument = props => {
-  console.log('====================================')
-  console.log('data', data)
-  console.log('====================================')
   const {
     report: { company, startPeriod, endPeriod, publishDate },
     scores,
   } = data
-  console.log('scores: ', scores)
+
   return (
     <Document {...props}>
       <Page size="A4" style={styles.page}>

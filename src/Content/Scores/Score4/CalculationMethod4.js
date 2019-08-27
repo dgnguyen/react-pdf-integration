@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet } from '@react-pdf/renderer'
 import { toArray } from 'lodash'
 import { Table, TR, Cell, CellText } from '../../../Styled'
-import { generateUID } from '../../../helpers'
 
 const styles = StyleSheet.create({
   table: {

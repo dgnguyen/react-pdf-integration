@@ -6,7 +6,6 @@ import {
   Title3,
   NormalText,
   BoldText,
-  ItalicText,
   Title4,
   Div,
 } from '../../../Styled'
@@ -15,7 +14,6 @@ import { generateUID, getEmployeesListKey } from '../../../helpers'
 import BorderTableWithNoCell from '../BorderTableWithNoCell'
 import CalculationMethod4 from './CalculationMethod4'
 import ScoresResumeTable from '../ScoresResumeTable'
-import List, { Item } from '../../List'
 import ScalePoints from '../ScalePoints'
 
 export default ({ data: { scores, startPeriod, endPeriod } }) => {
