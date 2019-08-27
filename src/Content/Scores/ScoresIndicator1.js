@@ -4,6 +4,7 @@ import ScoresResumeTable from './ScoresResumeTable'
 import CalculationMethod1 from './CalculationMethod1'
 import BorderTableWithNoCell from './BorderTableWithNoCell'
 import ScalePoints from './ScalePoints'
+import { generateUID } from '../../helpers'
 import {
   ContentPage,
   Title2,
@@ -15,6 +16,41 @@ import {
 } from '../../Styled'
 
 export default ({ data: { scores, startPeriod, endPeriod } }) => {
+  const scalePoints = [
+    [
+      [
+        '0,0',
+        '0,1',
+        '1,1',
+        '2,1',
+        '3,1',
+        '4,1',
+        '5,1',
+        '6,1',
+        '7,1',
+        '8,1',
+        '9,1',
+      ],
+      ['40', '39', '38', '37', '36', '35', '34', '33', '31', '29', '27'],
+    ],
+    [
+      [
+        '10,1',
+        '11,1',
+        '12,1',
+        '13,1',
+        '14,1',
+        '15,1',
+        '16,1',
+        '17,1',
+        '18,1',
+        '19,1',
+        '20,1',
+      ],
+      ['25', '23', '21', '19', '17', '14', '11', '8', '5', '2', '0'],
+    ],
+  ]
+
   return (
     <ContentPage>
       <Title2>
@@ -54,17 +90,11 @@ export default ({ data: { scores, startPeriod, endPeriod } }) => {
       <BorderTableWithNoCell>
         <View>
           <BoldText>Calcul de l’indicateur</BoldText>
-        </View>
-        <View>
           <ItalicText>Groupe par groupe</ItalicText>
-        </View>
-        <View>
           <NormalText>
             Pourcentage d’écart dans un groupe = Taux d’augmentation des femmes
             – taux d’augmentation des hommes
           </NormalText>
-        </View>
-        <View>
           <ItalicText>Pour la société</ItalicText>
           <NormalText>
             Modulation en fonction du poids de chaque groupe : Poids de chaque
@@ -77,42 +107,10 @@ export default ({ data: { scores, startPeriod, endPeriod } }) => {
       <View>
         <Title4>Barème de points</Title4>
       </View>
-      <ScalePoints
-        data={[
-          [
-            '0,0',
-            '0,1',
-            '1,1',
-            '2,1',
-            '3,1',
-            '4,1',
-            '5,1',
-            '6,1',
-            '7,1',
-            '8,1',
-            '9,1',
-          ],
-          ['40', '39', '38', '37', '36', '35', '34', '33', '31', '29', '27'],
-        ]}
-      />
-      <ScalePoints
-        data={[
-          [
-            '10,1',
-            '11,1',
-            '12,1',
-            '13,1',
-            '14,1',
-            '15,1',
-            '16,1',
-            '17,1',
-            '18,1',
-            '19,1',
-            '20,1',
-          ],
-          ['25', '23', '21', '19', '17', '14', '11', '8', '5', '2', '0'],
-        ]}
-      />
+      {scalePoints.map((item, i) => {
+        const key = generateUID(i, 'indicator1')
+        return <ScalePoints key={key} data={{ key, item }} />
+      })}
     </ContentPage>
   )
 }
