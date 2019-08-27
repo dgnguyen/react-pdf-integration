@@ -12,6 +12,9 @@ import {
   ScoresGlobal,
   ScoresIndicator1,
   ScoresIndicator2,
+  ScoresIndicator3,
+  ScoresIndicator4,
+  ScoresIndicator5,
 } from './Content/Scores'
 
 Font.register({
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
 })
 
 const WrapPage = ({ children }) => (
-  <Page size="A4" style={styles.page}>
+  <Page wrap size="A4" style={styles.page}>
     {children}
     <PageNumber />
   </Page>
@@ -68,24 +71,38 @@ export const MyDocument = props => {
       <Page size="A4" style={styles.page}>
         <IndexPage />
       </Page>
-      <WrapPage size="A4" style={styles.page}>
+      <WrapPage>
         <Introduction data={{ company, startPeriod, endPeriod }} />
       </WrapPage>
-      <WrapPage size="A4" wrap style={styles.page}>
+      <WrapPage>
         <ScoresGlobal data={{ scores, startPeriod, endPeriod }} />
         <PageNumber />
       </WrapPage>
-      <WrapPage size="A4" style={styles.page}>
+      <WrapPage>
         <ScoresIndicator1
           data={{ scores: scores.indicator1, startPeriod, endPeriod }}
         />
       </WrapPage>
-      <WrapPage size="A4" style={styles.page}>
+      <WrapPage>
         <ScoresIndicator2
           data={{ scores: scores.indicator2, startPeriod, endPeriod }}
         />
       </WrapPage>
-      <WrapPage size="A4" style={styles.page}></WrapPage>
+      <WrapPage>
+        <ScoresIndicator3
+          data={{ scores: scores.indicator3, startPeriod, endPeriod }}
+        />
+      </WrapPage>
+      <WrapPage>
+        <ScoresIndicator4
+          data={{ scores: scores.indicator4, startPeriod, endPeriod }}
+        />
+      </WrapPage>
+      <WrapPage>
+        <ScoresIndicator5
+          data={{ scores: scores.indicator5, startPeriod, endPeriod }}
+        />
+      </WrapPage>
     </Document>
   )
 }

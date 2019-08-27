@@ -1,11 +1,11 @@
 import React from 'react'
 import { toArray } from 'lodash'
 import { StyleSheet } from '@react-pdf/renderer'
-import DetailsByAgesTrance from './DetailsByAgesTrance'
-import DetailsByAgesTranceByGender from './DetailsByAgesTranceByGender'
-import { Table, TR, Cell, CellText } from '../../Styled'
-import TotalCalcul from './TotalCalcul'
-import { getDetailsKey, generateUID } from '../../helpers'
+import DetailsByAgesTrance from '../DetailsByAgesTrance'
+import DetailsByAgesTranceByGender from '../DetailsByAgesTranceByGender'
+import { Table, TR, Cell, CellText } from '../../../Styled'
+import TotalCalcul from '../TotalCalcul'
+import { getDetailsKey, generateUID } from '../../../helpers'
 
 const styles = StyleSheet.create({
   table: {

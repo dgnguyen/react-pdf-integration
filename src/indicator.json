@@ -365,8 +365,8 @@
       "details": {
         "workers": {
           "promotionRate": {
-            "female": 100,
-            "male": 100
+            "female": 102,
+            "male": 103
           },
           "delta": 12,
           "headcount": {

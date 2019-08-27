@@ -1,11 +1,17 @@
 import React from 'react'
 import { View } from '@react-pdf/renderer'
 
-import ScoresResumeTable from './ScoresResumeTable'
-import ScoresIndicatorsTable from './ScoresIndicatorsTable'
+import ScoresResumeTable from '../ScoresResumeTable'
+import CalculationMethodGlobal from './CalculationMethodGlobal'
 
-import List, { Item } from '../List'
-import { ContentPage, NormalText, Title1, Title2, Title3 } from '../../Styled'
+import List, { Item } from '../../List'
+import {
+  ContentPage,
+  NormalText,
+  Title1,
+  Title2,
+  Title3,
+} from '../../../Styled'
 
 export default ({
   data: {
@@ -33,6 +39,13 @@ export default ({
       index: overall.index,
     },
   ]
+
+  const list = [
+    'Les apprentis et titulaires d’un contrat de professionnalisation ;',
+    'Les salariés mis à la disposition de l’entreprise par une entreprise extérieure ;',
+    'Les salariés expatriés ;',
+    'Les salariés absents plus de la moitié de la période de référence.',
+  ]
   return (
     <ContentPage>
       <Title1>Scores</Title1>
@@ -55,17 +68,9 @@ export default ({
           indicateurs :
         </NormalText>
         <List>
-          <Item>
-            Les apprentis et titulaires d’un contrat de professionnalisation ;
-          </Item>
-          <Item>
-            Les salariés mis à la disposition de l’entreprise par une entreprise
-            extérieure ;
-          </Item>
-          <Item>Les salariés expatriés ;</Item>
-          <Item>
-            Les salariés absents plus de la moitié de la période de référence.
-          </Item>
+          {list.map((item, i) => (
+            <Item key={`list_ScoreGlobal_${i}`}>{item}</Item>
+          ))}
         </List>
       </View>
       <View>
@@ -88,7 +93,7 @@ export default ({
           Vous trouverez, ci-dessous, la répartition des points acquis
           indicateur par indicateur :
         </NormalText>
-        <ScoresIndicatorsTable data={scoresIndicator} />
+        <CalculationMethodGlobal data={scoresIndicator} />
       </View>
     </ContentPage>
   )

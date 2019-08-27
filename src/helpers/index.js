@@ -12,6 +12,7 @@ export const getCategories = data => [
   },
 ]
 
+//Clean that later
 export const getDetailsKey = indicatorNumber => {
   if (indicatorNumber.match(/indicator1/)) {
     return [
@@ -23,31 +24,20 @@ export const getDetailsKey = indicatorNumber => {
       'validStaff',
       'deltaTotal',
     ]
-  }
-  if (indicatorNumber.match(/indicator2/)) {
-    return [
-      'payRiseRate',
-      'delta',
-      'headcount',
-      'validGroup',
-      'validStaff',
-      'deltaTotal',
-    ]
-  } else if (indicatorNumber.match(/indicator3/)) {
-    return [
-      'promotionRate',
-      'delta',
-      'headcount',
-      'validGroup',
-      'validStaff',
-      'deltaTotal',
-    ]
   } else if (indicatorNumber.match(/indicator4/)) {
     return ['MaternityLeave', 'deltaTotal']
   } else if (indicatorNumber.match(/indicator5/)) {
     return ['top10', 'deltaTotal']
   }
   return []
+}
+
+export const getEmployeesListKey = indicatorNumber => {
+  const commonKeys = ['NIR', 'Matricule', 'Nom', 'Prénom']
+  if (indicatorNumber.match(/indicator4/)) {
+    return [...commonKeys, 'Date retour', 'Augmentation']
+  }
+  return commonKeys
 }
 
 export const generateUID = (

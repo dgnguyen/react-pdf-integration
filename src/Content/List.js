@@ -5,7 +5,7 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer'
 const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
-    margin: '2px 0 5px 20px',
+    margin: '2px 0 2px 20px',
   },
   bulletPoint: {
     width: 10,

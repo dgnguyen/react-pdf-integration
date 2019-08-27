@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, TR, Cell, CellText } from '../../Styled'
+import { Table, TR, Cell, CellText, BoldText } from '../../Styled'
 
 export default ({ data: { item, key } }) => {
   const cellNumber = item[0].length
@@ -9,7 +9,9 @@ export default ({ data: { item, key } }) => {
       {item.map((tr, indexTR) => (
         <TR key={`ScalePoints_${key}_${indexTR}`}>
           <Cell width={10}>
-            <CellText>{indexTR === 0 ? 'Plancher' : 'Note'}</CellText>
+            <CellText>
+              <BoldText>{indexTR === 0 ? 'Plancher' : 'Note'}</BoldText>
+            </CellText>
           </Cell>
           {tr.map((item, indexCell) => (
             <Cell

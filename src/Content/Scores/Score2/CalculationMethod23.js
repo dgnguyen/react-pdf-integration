@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet } from '@react-pdf/renderer'
 import { toArray } from 'lodash'
-import { Table, TR, Cell, CellText } from '../../Styled'
-import { getCategories, generateUID } from '../../helpers'
+import { Table, TR, Cell, CellText } from '../../../Styled'
+import { getCategories, generateUID } from '../../../helpers'
 
 const styles = StyleSheet.create({
   table: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default ({ data }) => {
+export default ({ data, firstCol }) => {
   const jobs = getCategories(data)
 
   return (
@@ -24,7 +24,7 @@ export default ({ data }) => {
         </Cell>
         <Cell width={20}>
           <Cell width={100} borderRight={'none'} height={50}>
-            <CellText>Taux d’augmentation</CellText>
+            <CellText>{firstCol}</CellText>
           </Cell>
           <TR>
             <Cell width={50} borderBottom={'none'}>

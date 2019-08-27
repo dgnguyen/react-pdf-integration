@@ -1,10 +1,10 @@
 import React from 'react'
 import { View } from '@react-pdf/renderer'
-import ScoresResumeTable from './ScoresResumeTable'
+import ScoresResumeTable from '../ScoresResumeTable'
 import CalculationMethod1 from './CalculationMethod1'
-import BorderTableWithNoCell from './BorderTableWithNoCell'
-import ScalePoints from './ScalePoints'
-import { generateUID } from '../../helpers'
+import BorderTableWithNoCell from '../BorderTableWithNoCell'
+import ScalePoints from '../ScalePoints'
+import { generateUID } from '../../../helpers'
 import {
   ContentPage,
   Title2,
@@ -13,7 +13,7 @@ import {
   NormalText,
   BoldText,
   ItalicText,
-} from '../../Styled'
+} from '../../../Styled'
 
 export default ({ data: { scores, startPeriod, endPeriod } }) => {
   const scalePoints = [

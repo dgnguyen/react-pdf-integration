@@ -108,6 +108,10 @@ export const ContentPage = styled(View)`
   height: 100%;
 `
 
+export const Div = styled(View)`
+  margin-bottom: 15px;
+`
+
 export const Title1 = styled(Text)`
   font-size: 16px;
   margin-bottom: 15px;
@@ -116,7 +120,7 @@ export const Title1 = styled(Text)`
 
 export const Title2 = styled(Text)`
   font-size: 15px;
-  margin: 10px 0 15px 0;
+  margin: 10px 0 10px 0;
 `
 
 export const Title3 = styled(Text)`

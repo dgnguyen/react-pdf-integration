@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from '@react-pdf/renderer'
-import { Table, TR, Cell, CellText } from '../../Styled'
+import { Table, TR, Cell, CellText } from '../../../Styled'
 
 const styles = StyleSheet.create({
   tr: {

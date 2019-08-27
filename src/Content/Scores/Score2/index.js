@@ -1,10 +1,10 @@
 import React from 'react'
 import { View } from '@react-pdf/renderer'
-import ScoresResumeTable from './ScoresResumeTable'
-import BorderTableWithNoCell from './BorderTableWithNoCell'
-import CalculationMethod2 from './CalculationMethod2'
-import ScalePoints from './ScalePoints'
-import { generateUID } from '../../helpers'
+import ScoresResumeTable from '../ScoresResumeTable'
+import BorderTableWithNoCell from '../BorderTableWithNoCell'
+import CalculationMethod23 from './CalculationMethod23'
+import ScalePoints from '../ScalePoints'
+import { generateUID } from '../../../helpers'
 import {
   ContentPage,
   Title2,
@@ -13,7 +13,7 @@ import {
   NormalText,
   BoldText,
   ItalicText,
-} from '../../Styled'
+} from '../../../Styled'
 
 export default ({ data: { scores, startPeriod, endPeriod } }) => {
   const scalePoints = [['0,0', '2,1', '5,1', '10,1'], ['20', '10', '5', '0']]
@@ -40,7 +40,7 @@ export default ({ data: { scores, startPeriod, endPeriod } }) => {
       </View>
       <View>
         <Title3>Méthode de calcul</Title3>
-        <CalculationMethod2 data={scores} />
+        <CalculationMethod23 data={scores} firstCol={'Taux d’augmentation'} />
       </View>
       <Title3>Description du calcul de l’indicateur</Title3>
       <View>
